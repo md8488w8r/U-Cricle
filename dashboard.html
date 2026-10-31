@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>U-Circle Dashboard</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+ background:#071426;color:white;
+ font-family:Arial,sans-serif;
+ padding-bottom:30px
+}
+header{
+ background:#102641;padding:20px;
+ display:flex;justify-content:space-between;
+ align-items:center
+}
+.logo{font-size:24px;color:#36d6a0;font-weight:bold}
+.profile{color:#c4d3e3}
+.container{padding:18px;max-width:600px;margin:auto}
+.welcome{margin:15px 0 22px}
+.welcome p{color:#aebfd2;margin-top:7px}
+.balance{
+ background:linear-gradient(120deg,#12634e,#102c48);
+ padding:25px;border-radius:15px;margin-bottom:18px
+}
+.balance small{color:#c6e7dc}
+.balance h1{font-size:32px;margin:12px 0}
+.balance p{font-size:12px;color:#c6e7dc}
+.cards{
+ display:grid;grid-template-columns:1fr 1fr;
+ gap:12px;margin:20px 0
+}
+.card{
+ background:#102641;padding:19px;
+ border:1px solid #25415d;border-radius:12px
+}
+.card small{color:#aebfd2}
+.card h2{margin-top:12px;font-size:21px}
+.actions{
+ display:grid;grid-template-columns:repeat(2,1fr);
+ gap:12px;margin:15px 0 25px
+}
+.action{
+ background:#102641;border:1px solid #29445e;
+ color:white;padding:18px 10px;
+ border-radius:10px;text-align:center;
+ text-decoration:none;font-size:14px
+}
+.action span{display:block;font-size:24px;margin-bottom:9px}
+h3{margin:25px 0 15px}
+.activity{
+ background:#102641;padding:16px;
+ border-radius:10px;margin-bottom:10px;
+ display:flex;justify-content:space-between;
+ align-items:center
+}
+.activity small{color:#aebfd2}
+footer{text-align:center;color:#8599ae;font-size:12px;padding:20px}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="logo">U-Circle</div>
+ <div class="profile">👤 My Account</div>
+</header>
+
+<main class="container">
+
+ <div class="welcome">
+  <h2>Welcome, User!</h2>
+  <p>Welcome to your U-Circle dashboard.</p>
+ </div>
+
+ <section class="balance">
+  <small>Demo Available Balance</small>
+  <h1>৳ 0.00</h1>
+  <p>Demonstration value only</p>
+ </section>
+
+ <div class="cards">
+  <div class="card">
+   <small>Total Investment</small>
+   <h2>৳ 0.00</h2>
+  </div>
+  <div class="card">
+   <small>Total Earnings</small>
+   <h2>৳ 0.00</h2>
+  </div>
+  <div class="card">
+   <small>Total Deposit</small>
+   <h2>৳ 0.00</h2>
+  </div>
+  <div class="card">
+   <small>Total Withdraw</small>
+   <h2>৳ 0.00</h2>
+  </div>
+ </div>
+
+ <h3>Quick Actions</h3>
+ <div class="actions">
+  <a class="action" href="plans.html">
+   <span>📊</span>Investment Plans
+  </a>
+  <a class="action" href="deposit.html">
+   <span>💳</span>Deposit
+  </a>
+  <a class="action" href="withdraw.html">
+   <span>💸</span>Withdraw
+  </a>
+  <a class="action" href="history.html">
+   <span>📜</span>History
+  </a>
+ </div>
+
+ <h3>Recent Activity</h3>
+ <div class="activity">
+  <div>
+   <b>No transactions yet</b><br>
+   <small>Transaction history will appear here.</small>
+  </div>
+  <span>—</span>
+ </div>
+
+ <h3>Account Information</h3>
+ <div class="activity">
+  <div>
+   <b>Account Status</b><br>
+   <small>Demo account</small>
+  </div>
+  <span>Demo</span>
+ </div>
+
+</main>
+
+<footer>
+ U-Circle © 2026<br>
+ Demonstration interface only
+</footer>
+
+</body>
+</html>
