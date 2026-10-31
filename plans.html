@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>U-Circle Investment Plans</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+ background:#071426;color:white;
+ font-family:Arial,sans-serif;
+ padding-bottom:30px
+}
+header{
+ background:#102641;padding:20px;
+ display:flex;justify-content:space-between;
+ align-items:center
+}
+.logo{font-size:24px;color:#36d6a0;font-weight:bold}
+header a{color:white;text-decoration:none;font-size:14px}
+.container{max-width:600px;margin:auto;padding:20px}
+.heading{text-align:center;padding:30px 5px}
+.heading h1{font-size:29px;margin-bottom:12px}
+.heading span{color:#36d6a0}
+.heading p{color:#aebfd2;line-height:1.6}
+.plan{
+ background:#102641;border:1px solid #29445e;
+ border-radius:14px;padding:23px;margin:17px 0
+}
+.plan h2{color:#36d6a0;margin-bottom:12px}
+.amount{font-size:27px;font-weight:bold;margin:15px 0}
+.plan p{color:#b7c6d7;line-height:1.8;font-size:14px}
+.tag{
+ display:inline-block;background:#173d42;
+ color:#36d6a0;padding:6px 10px;
+ border-radius:20px;font-size:12px
+}
+button{
+ width:100%;padding:13px;margin-top:18px;
+ border:0;border-radius:7px;
+ background:#36d6a0;color:#071426;
+ font-size:15px;font-weight:bold
+}
+.notice{
+ background:#142d46;border-radius:10px;
+ padding:17px;margin-top:25px;
+ color:#bdcada;line-height:1.7;font-size:13px
+}
+footer{text-align:center;color:#8599ae;padding:25px;font-size:12px}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="logo">U-Circle</div>
+ <a href="dashboard.html">← Dashboard</a>
+</header>
+
+<main class="container">
+
+ <section class="heading">
+  <h1>Our <span>Plans</span></h1>
+  <p>
+   Explore the available plan structures
+   and review their terms and conditions.
+  </p>
+ </section>
+
+ <div class="plan">
+  <span class="tag">PLAN 01</span>
+  <h2>Starter Plan</h2>
+  <div class="amount">৳ 1,000</div>
+  <p>
+   Minimum amount: ৳1,000<br>
+   Maximum amount: ৳5,000<br>
+   Duration: 30 Days<br>
+   Return: Not specified
+  </p>
+  <button onclick="details('Starter Plan')">
+   View Details
+  </button>
+ </div>
+
+ <div class="plan">
+  <span class="tag">PLAN 02</span>
+  <h2>Standard Plan</h2>
+  <div class="amount">৳ 5,000</div>
+  <p>
+   Minimum amount: ৳5,000<br>
+   Maximum amount: ৳20,000<br>
+   Duration: 60 Days<br>
+   Return: Not specified
+  </p>
+  <button onclick="details('Standard Plan')">
+   View Details
+  </button>
+ </div>
+
+ <div class="plan">
+  <span class="tag">PLAN 03</span>
+  <h2>Premium Plan</h2>
+  <div class="amount">৳ 20,000</div>
+  <p>
+   Minimum amount: ৳20,000<br>
+   Maximum amount: ৳50,000<br>
+   Duration: 90 Days<br>
+   Return: Not specified
+  </p>
+  <button onclick="details('Premium Plan')">
+   View Details
+  </button>
+ </div>
+
+ <div class="notice">
+  <b>Important Notice</b><br>
+  These are illustrative demonstration plans only.
+  They do not represent actual investment offers.
+  No money is accepted and no profit is promised.
+  Real investment products require appropriate
+  legal and regulatory approval.
+ </div>
+
+</main>
+
+<footer>
+ U-Circle © 2026
+</footer>
+
+<script>
+function details(name){
+ alert(name + '\nDemo plan only. No investment is available.');
+}
+</script>
+
+</body>
+</html>
