@@ -1,0 +1,219 @@
+
+/* U-Cricle Professional Website Design */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #0b1830;
+  --secondary: #122746;
+  --accent: #16c784;
+  --text: #ffffff;
+  --muted: #aab8cc;
+  --card: #172d4b;
+  --border: #29415f;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--primary);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input {
+  font: inherit;
+}
+
+.container {
+  width: 92%;
+  max-width: 1150px;
+  margin: auto;
+}
+
+.navbar {
+  background: var(--secondary);
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: var(--muted);
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.hero {
+  padding: 75px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #071b17;
+  padding: 13px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.section {
+  padding: 35px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.card h3 {
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.form-box {
+  width: 92%;
+  max-width: 430px;
+  margin: 55px auto;
+  padding: 28px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.form-box input {
+  width: 100%;
+  padding: 13px;
+  margin: 9px 0;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  background: var(--primary);
+  color: white;
+}
+
+.form-box .btn {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.dashboard-header {
+  padding: 25px 0;
+}
+
+.balance {
+  font-size: 30px;
+  color: var(--accent);
+  margin-top: 10px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+}
+
+th, td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  color: var(--accent);
+}
+
+.footer {
+  margin-top: 50px;
+  padding: 25px;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .nav-links {
+    gap: 10px;
+    font-size: 13px;
+  }
+
+  .navbar .container {
+    flex-direction: column;
+  }
+}
