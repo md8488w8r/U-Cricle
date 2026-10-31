@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>U-Circle Transaction History</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+ background:#071426;color:white;
+ font-family:Arial,sans-serif;padding-bottom:30px
+}
+header{
+ background:#102641;padding:20px;
+ display:flex;justify-content:space-between;
+ align-items:center
+}
+.logo{font-size:24px;color:#36d6a0;font-weight:bold}
+header a{color:white;text-decoration:none}
+.container{max-width:600px;margin:auto;padding:20px}
+h2{margin:15px 0}
+p{color:#aebfd2;font-size:14px;line-height:1.6}
+.filters{
+ display:flex;gap:10px;margin:20px 0
+}
+.filters button{
+ flex:1;padding:12px;border-radius:7px;
+ border:1px solid #35516c;
+ background:#102641;color:white
+}
+.filters button.active{
+ background:#36d6a0;color:#071426
+}
+.transaction{
+ background:#102641;padding:17px;
+ border-radius:10px;margin-bottom:12px;
+ border:1px solid #29445e
+}
+.top{
+ display:flex;justify-content:space-between;
+ gap:10px;margin-bottom:10px
+}
+.top b{font-size:15px}
+.amount{font-size:19px;font-weight:bold}
+.deposit{color:#36d6a0}
+.withdraw{color:#ffbd75}
+.info{color:#aebfd2;font-size:12px;line-height:1.8}
+.status{
+ display:inline-block;padding:5px 10px;
+ border-radius:20px;font-size:11px;
+ background:#273b54;color:#d5dfeb
+}
+.empty{
+ background:#102641;padding:30px;
+ text-align:center;border-radius:10px;
+ color:#aebfd2
+}
+footer{text-align:center;color:#8599ae;padding:25px;font-size:12px}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="logo">U-Circle</div>
+ <a href="dashboard.html">← Dashboard</a>
+</header>
+
+<main class="container">
+ <h2>Transaction History</h2>
+ <p>Review your demonstration transactions.</p>
+
+ <div class="filters">
+  <button class="active" onclick="filterData('all',this)">All</button>
+  <button onclick="filterData('deposit',this)">Deposit</button>
+  <button onclick="filterData('withdraw',this)">Withdraw</button>
+ </div>
+
+ <div id="list">
+
+  <div class="transaction" data-type="deposit">
+   <div class="top">
+    <b class="deposit">Deposit</b>
+    <span class="amount deposit">+ ৳0.00</span>
+   </div>
+   <div class="info">
+    Transaction ID: DEMO-001<br>
+    Date: Demo record<br>
+    Method: Demo Payment
+   </div>
+   <span class="status">Demo Only</span>
+  </div>
+
+  <div class="transaction" data-type="withdraw">
+   <div class="top">
+    <b class="withdraw">Withdraw</b>
+    <span class="amount withdraw">- ৳0.00</span>
+   </div>
+   <div class="info">
+    Transaction ID: DEMO-002<br>
+    Date: Demo record<br>
+    Method: Demo Payment
+   </div>
+   <span class="status">Demo Only</span>
+  </div>
+
+ </div>
+
+ <div class="empty" id="empty" style="display:none">
+  No transactions available.
+ </div>
+</main>
+
+<footer>
+ U-Circle © 2026<br>
+ Demonstration records only
+</footer>
+
+<script>
+function filterData(type,button){
+ const items=document.querySelectorAll('.transaction');
+ let count=0;
+
+ items.forEach(item=>{
+  const show=type==='all'||item.dataset.type===type;
+  item.style.display=show?'block':'none';
+  if(show) count++;
+ });
+
+ document.querySelectorAll('.filters button')
+ .forEach(btn=>btn.classList.remove('active'));
+
+ button.classList.add('active');
+
+ document.getElementById('empty').style.display=
+ count===0?'block':'none';
+}
+</script>
+
+</body>
+</html>
