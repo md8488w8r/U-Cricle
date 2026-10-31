@@ -2,121 +2,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>U-Circle | Investment Platform</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{
- font-family:Arial,sans-serif;
- background:#071426;color:white;
-}
-header{
- display:flex;justify-content:space-between;
- align-items:center;padding:20px;
- background:#0c2038;
-}
-.logo{font-size:25px;font-weight:bold;color:#36d6a0}
-nav a{color:white;text-decoration:none;margin-left:12px;font-size:13px}
-.hero{text-align:center;padding:65px 20px 45px}
-.hero h1{font-size:38px;margin-bottom:15px}
-.hero h1 span{color:#36d6a0}
-.hero p{color:#b9c7d8;line-height:1.7}
-.btn{
- display:inline-block;margin-top:25px;
- padding:13px 25px;background:#36d6a0;
- color:#071426;text-decoration:none;
- border-radius:7px;font-weight:bold;
-}
-.container{padding:20px}
-.section-title{text-align:center;margin:30px 0}
-.cards{
- display:grid;grid-template-columns:1fr 1fr;
- gap:15px;
-}
-.card{
- background:#112944;padding:22px 15px;
- border-radius:12px;text-align:center;
- border:1px solid #25425e;
-}
-.card h3{color:#36d6a0;margin-bottom:12px}
-.card p{color:#c0ccda;font-size:14px;line-height:1.6}
-.notice{
- background:#112944;padding:20px;
- border-radius:10px;margin:30px 0;
- color:#bdcada;line-height:1.7;
-}
-footer{
- text-align:center;padding:25px;
- background:#0c2038;color:#aebdce;
- font-size:13px;
-}
-@media(max-width:350px){
- .hero h1{font-size:30px}
- nav a{margin-left:5px}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="U-Cricle - Your digital account dashboard">
+  <title>U-Cricle | Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
- <div class="logo">U-Circle</div>
- <nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
- </nav>
-</header>
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">U-CRICLE</a>
 
-<section class="hero" id="home">
- <h1>Welcome to <span>U-Circle</span></h1>
- <p>
-  Explore our digital platform.
-  Manage your account and discover
-  investment information.
- </p>
- <a href="#about" class="btn">Explore Platform</a>
-</section>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="plans.html">Plans</a>
+        <a href="login.html">Login</a>
+        <a href="login.html">Register</a>
+      </nav>
+    </div>
+  </header>
 
-<div class="container" id="about">
- <h2 class="section-title">Our Features</h2>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Welcome to U-Cricle</h1>
+        <p>
+          A modern digital platform to explore plans,
+          manage your account and track your activity.
+        </p>
+        <a href="plans.html" class="btn">Explore Plans</a>
+        <a href="login.html" class="btn">Get Started</a>
+      </div>
+    </section>
 
- <div class="cards">
-  <div class="card">
-   <h3>👤 Account</h3>
-   <p>Personal account management.</p>
-  </div>
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Our Features</h2>
 
-  <div class="card">
-   <h3>📊 Dashboard</h3>
-   <p>View your account information.</p>
-  </div>
+        <div class="grid">
+          <div class="card">
+            <h3>Personal Dashboard</h3>
+            <p>View your account information in one place.</p>
+          </div>
 
-  <div class="card">
-   <h3>💼 Plans</h3>
-   <p>Explore available investment information.</p>
-  </div>
+          <div class="card">
+            <h3>Plan Information</h3>
+            <p>Explore available plans and their details.</p>
+          </div>
 
-  <div class="card">
-   <h3>📜 History</h3>
-   <p>Review account activity.</p>
-  </div>
- </div>
+          <div class="card">
+            <h3>Activity History</h3>
+            <p>Review your account activity and records.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
- <div class="notice">
-  <h3>Important Notice</h3>
-  This website is currently a demonstration.
-  No real deposits, withdrawals or investments
-  are accepted. Financial services will only
-  be enabled after applicable legal approvals.
- </div>
-</div>
+    <section class="section">
+      <div class="container">
+        <div class="card">
+          <h2>Start Exploring</h2>
+          <p>
+            Create a demo account to explore the platform.
+            No real deposits, withdrawals or investment
+            transactions are processed on this demo website.
+          </p>
+          <br>
+          <a href="login.html" class="btn">Create Account</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<footer id="contact">
- <h3>U-Circle</h3>
- <p>Digital Investment Platform</p>
- <p>© 2026 U-Circle. All Rights Reserved.</p>
-</footer>
+  <footer class="footer">
+    <p>© <span id="currentYear"></span> U-Cricle. All rights reserved.</p>
+    <p>Demo platform — not an offer of investment.</p>
+  </footer>
 
+  <script src="app.js"></script>
 </body>
 </html>
