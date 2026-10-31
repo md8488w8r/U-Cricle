@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>U-Circle Admin Panel</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+ background:#071426;color:white;
+ font-family:Arial,sans-serif
+}
+header{
+ background:#102641;padding:20px;
+ display:flex;justify-content:space-between;
+ align-items:center
+}
+.logo{font-size:24px;color:#36d6a0;font-weight:bold}
+header span{font-size:13px;color:#b9c9da}
+.container{max-width:750px;margin:auto;padding:20px}
+h2{margin:15px 0}
+.subtitle{color:#aebfd2;font-size:13px}
+.grid{
+ display:grid;grid-template-columns:1fr 1fr;
+ gap:13px;margin:22px 0
+}
+.card{
+ background:#102641;padding:20px;
+ border:1px solid #29445e;border-radius:11px
+}
+.card small{color:#aebfd2}
+.card h2{color:#36d6a0;font-size:26px}
+.section{
+ background:#102641;padding:20px;
+ border-radius:11px;margin:18px 0
+}
+.section h3{margin-bottom:15px}
+.item{
+ padding:13px 0;border-bottom:1px solid #29445e;
+ display:flex;justify-content:space-between;
+ gap:10px;font-size:14px
+}
+.item small{display:block;color:#aebfd2;margin-top:6px}
+.status{
+ color:#eacb81;font-size:12px
+}
+.links{
+ display:grid;grid-template-columns:1fr 1fr;
+ gap:10px;margin:20px 0
+}
+.links a{
+ padding:15px;text-align:center;
+ background:#102641;color:white;
+ text-decoration:none;border-radius:8px;
+ border:1px solid #29445e
+}
+.notice{
+ background:#173d42;padding:16px;
+ border-radius:9px;color:#c5e9dc;
+ font-size:13px;line-height:1.7
+}
+footer{text-align:center;padding:25px;color:#8599ae;font-size:12px}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="logo">U-Circle</div>
+ <span>Admin Dashboard</span>
+</header>
+
+<main class="container">
+
+ <h2>Admin Overview</h2>
+ <p class="subtitle">
+  Welcome to U-Circle administration demo.
+ </p>
+
+ <div class="grid">
+  <div class="card">
+   <small>Total Users</small>
+   <h2>0</h2>
+  </div>
+
+  <div class="card">
+   <small>Total Deposits</small>
+   <h2>৳0</h2>
+  </div>
+
+  <div class="card">
+   <small>Withdraw Requests</small>
+   <h2>0</h2>
+  </div>
+
+  <div class="card">
+   <small>Demo Transactions</small>
+   <h2>0</h2>
+  </div>
+ </div>
+
+ <div class="section">
+  <h3>User Management</h3>
+  <div class="item">
+   <div>
+    <b>User List</b>
+    <small>No connected user database</small>
+   </div>
+   <span class="status">Demo</span>
+  </div>
+ </div>
+
+ <div class="section">
+  <h3>Deposit Requests</h3>
+  <div class="item">
+   <div>
+    <b>No Deposit Requests</b>
+    <small>Database connection pending</small>
+   </div>
+   <span class="status">Demo</span>
+  </div>
+ </div>
+
+ <div class="section">
+  <h3>Withdraw Requests</h3>
+  <div class="item">
+   <div>
+    <b>No Withdraw Requests</b>
+    <small>Database connection pending</small>
+   </div>
+   <span class="status">Demo</span>
+  </div>
+ </div>
+
+ <div class="section">
+  <h3>Website Pages</h3>
+  <div class="links">
+   <a href="index.html">Home Page</a>
+   <a href="dashboard.html">Dashboard</a>
+   <a href="plans.html">Plans</a>
+   <a href="history.html">History</a>
+   <a href="deposit.html">Deposit</a>
+   <a href="withdraw.html">Withdraw</a>
+  </div>
+ </div>
+
+ <div class="notice">
+  <b>Security Notice</b><br>
+  This is a visual admin demo, not a secured
+  administrator account. No user data or
+  financial requests are connected. Do not
+  publish this page as a real admin system
+  until server-side authorization is implemented.
+ </div>
+
+</main>
+
+<footer>
+ U-Circle Admin © 2026
+</footer>
+
+</body>
+</html>
