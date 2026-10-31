@@ -2,101 +2,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>U-Circle Account</title>
-<style>
-*{box-sizing:border-box}
-body{
- margin:0;background:#071426;color:white;
- font-family:Arial,sans-serif;
- display:flex;justify-content:center;
- align-items:center;min-height:100vh;
- padding:20px
-}
-.container{
- width:100%;max-width:400px;
- background:#102641;padding:28px;
- border-radius:15px;
- border:1px solid #284561
-}
-.logo{text-align:center;font-size:30px;
- color:#36d6a0;font-weight:bold}
-h2{text-align:center;margin:20px 0}
-input{
- width:100%;padding:14px;margin:9px 0;
- background:#071426;border:1px solid #35516c;
- border-radius:7px;color:white;font-size:15px
-}
-button{
- width:100%;padding:14px;margin-top:12px;
- background:#36d6a0;color:#071426;
- border:0;border-radius:7px;
- font-size:16px;font-weight:bold
-}
-.switch{text-align:center;margin-top:20px;color:#b9c7d8}
-.switch a{color:#36d6a0;cursor:pointer}
-.small{text-align:center;color:#9aafc5;font-size:12px;margin-top:20px}
-.hidden{display:none}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>U-Cricle | Account</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
- <div class="logo">U-Circle</div>
 
- <div id="login">
-  <h2>Welcome Back</h2>
-  <form onsubmit="demo(event)">
-   <input type="tel" placeholder="Mobile Number"
-   required pattern="[0-9]{10,15}">
-   <input type="password" placeholder="Password"
-   required minlength="8">
-   <button type="submit">Login</button>
-  </form>
-  <div class="switch">
-   Don't have an account?
-   <a onclick="showRegister()">Register</a>
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo">U-CRICLE</a>
+    <a href="index.html">Home</a>
   </div>
- </div>
+</header>
 
- <div id="register" class="hidden">
-  <h2>Create Account</h2>
-  <form onsubmit="demo(event)">
-   <input type="text" placeholder="Full Name" required>
-   <input type="tel" placeholder="Mobile Number"
-   required pattern="[0-9]{10,15}">
-   <input type="email" placeholder="Email Address" required>
-   <input type="password" placeholder="Create Password"
-   required minlength="8">
-   <input type="password" placeholder="Confirm Password"
-   required minlength="8">
-   <button type="submit">Create Account</button>
+<main class="form-box">
+  <h2>Create Your Account</h2>
+
+  <form id="registerForm">
+    <input type="text" id="fullName" placeholder="Full Name" required>
+
+    <input type="tel" id="phone" placeholder="Mobile Number" required>
+
+    <input type="email" id="email" placeholder="Gmail Address" required>
+
+    <input type="password" id="password" placeholder="Password" minlength="8" required>
+
+    <input type="password" id="confirmPassword" placeholder="Confirm Password" minlength="8" required>
+
+    <button type="submit" class="btn">Register</button>
   </form>
-  <div class="switch">
-   Already registered?
-   <a onclick="showLogin()">Login</a>
-  </div>
- </div>
 
- <div class="small">
-  U-Circle © 2026<br>
-  Demo interface only. No real account is created.
- </div>
-</div>
+  <p style="margin-top:20px; text-align:center;">
+    Already have an account?
+    <a href="#login" style="color:#16c784;">Login</a>
+  </p>
+
+  <div id="login" style="margin-top:30px;">
+    <h2>Login</h2>
+
+    <form id="loginForm">
+      <input type="email" placeholder="Gmail Address" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit" class="btn">Login</button>
+    </form>
+  </div>
+
+  <p id="message" style="margin-top:15px; color:#16c784;"></p>
+
+  <p style="margin-top:20px; color:#aab8cc; font-size:13px;">
+    Demo only: This page does not create secure accounts or store passwords.
+  </p>
+</main>
+
+<footer class="footer">
+  U-Cricle Demo Platform
+</footer>
 
 <script>
-function showRegister(){
- document.getElementById('login').classList.add('hidden');
- document.getElementById('register').classList.remove('hidden');
-}
-function showLogin(){
- document.getElementById('register').classList.add('hidden');
- document.getElementById('login').classList.remove('hidden');
-}
-function demo(e){
- e.preventDefault();
- alert('Demo only. Account authentication is not connected yet.');
-}
+const registerForm = document.getElementById("registerForm");
+const loginForm = document.getElementById("loginForm");
+const message = document.getElementById("message");
+
+registerForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("confirmPassword").value;
+
+  if (password !== confirmPassword) {
+    message.textContent = "Passwords do not match!";
+    return;
+  }
+
+  message.textContent =
+    "Demo only: Secure registration backend is not connected.";
+});
+
+loginForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  message.textContent =
+    "Demo only: Secure login backend is not connected.";
+});
 </script>
+
 </body>
 </html>
