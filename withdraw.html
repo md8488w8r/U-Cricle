@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>U-Circle Withdraw</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;padding:20px;
+ background:#071426;color:white;
+ font-family:Arial,sans-serif
+}
+header{
+ display:flex;justify-content:space-between;
+ align-items:center;padding:10px 0 25px
+}
+.logo{font-size:25px;color:#36d6a0;font-weight:bold}
+header a{color:white;text-decoration:none}
+.container{max-width:450px;margin:auto}
+.box{
+ background:#102641;padding:23px;
+ border-radius:14px;border:1px solid #29445e
+}
+h2{margin-bottom:10px}
+p{color:#aebfd2;font-size:14px;line-height:1.7}
+label{display:block;margin-top:18px;margin-bottom:8px}
+input,select{
+ width:100%;padding:14px;
+ background:#071426;color:white;
+ border:1px solid #35516c;
+ border-radius:7px;font-size:15px
+}
+button{
+ width:100%;padding:14px;margin-top:22px;
+ background:#36d6a0;color:#071426;
+ border:0;border-radius:7px;
+ font-weight:bold;font-size:16px
+}
+.notice{
+ background:#173d42;padding:15px;
+ border-radius:8px;margin-top:20px;
+ color:#c5e9dc;font-size:13px;line-height:1.7
+}
+footer{text-align:center;color:#8599ae;margin-top:25px;font-size:12px}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="logo">U-Circle</div>
+ <a href="dashboard.html">← Dashboard</a>
+</header>
+
+<main class="container">
+ <div class="box">
+  <h2>Withdraw Request</h2>
+  <p>Demo withdrawal request form.</p>
+
+  <form id="withdrawForm">
+
+   <label>Payment Method</label>
+   <select id="method" required>
+    <option value="">Select Method</option>
+    <option value="Demo bKash">Demo bKash</option>
+    <option value="Demo Nagad">Demo Nagad</option>
+    <option value="Demo Bank">Demo Bank</option>
+   </select>
+
+   <label>Withdraw Amount (BDT)</label>
+   <input id="amount" type="number"
+   min="1" max="1000000"
+   placeholder="Enter amount" required>
+
+   <label>Account Number (Demo)</label>
+   <input id="account" type="text"
+   maxlength="40"
+   placeholder="Enter demo account" required>
+
+   <button type="submit">Submit Demo Request</button>
+  </form>
+
+  <div class="notice">
+   <b>Important Notice</b><br>
+   This is a demonstration only.
+   No real withdrawal will be processed.
+   No money will be transferred.
+  </div>
+ </div>
+</main>
+
+<footer>U-Circle © 2026</footer>
+
+<script>
+document.getElementById('withdrawForm')
+.addEventListener('submit',function(e){
+ e.preventDefault();
+
+ const method=document.getElementById('method').value;
+ const amount=document.getElementById('amount').value;
+ const account=document.getElementById('account').value.trim();
+
+ if(!method || !amount || !account){
+  alert('Please complete all fields.');
+  return;
+ }
+
+ alert(
+  'Demo withdrawal request received.\\n'+
+  'Method: '+method+
+  '\\nAmount: ৳'+amount+
+  '\\nNo money was transferred.'
+ );
+
+ this.reset();
+});
+</script>
+
+</body>
+</html>
